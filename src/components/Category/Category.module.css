@@ -1,0 +1,21 @@
+.wrap_category{
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrap_category a{
+    width: 90px;
+    height:90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 7px;
+    border-radius: 50%;
+    background-color: #2d2b2b;
+    text-decoration: none;
+    cursor: pointer;
+    color: #ececec;
+    margin: 0 20px;
+}
