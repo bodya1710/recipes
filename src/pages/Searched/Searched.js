@@ -7,7 +7,7 @@ import css from "./Searched.module.css";
 
 const Searched = () => {
 
-    const {type} = useParams();
+    const {search} = useParams();
 
     const [recipes, setRecipes] = useState([]);
     const [isPostLoading, setIsPostLoading] = useState(false);
@@ -15,12 +15,12 @@ const Searched = () => {
 
     useEffect(()=>{
         fetchRecipe();
-    }, [type]);
+    }, [search]);
 
     async function fetchRecipe() {
         setIsPostLoading(true)
-        await recipeService.getAllLocal(type).then(recipe => {
-                setRecipes(recipe.data.recipes);
+        await recipeService.getSearch(search).then(recipe => {
+                setRecipes(recipe.data.results);
         })
         setIsPostLoading(false);
     }

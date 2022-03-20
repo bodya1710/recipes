@@ -1,21 +1,29 @@
 form{
-    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 .wrap_input input{
     border: none;
     outline: none;
-    margin: 20px 50px;
     display: flex;
     justify-content: center;
+    width: 100%;
+    background:linear-gradient(35deg, #494949, #313131);
+    color: #ececec;
+    padding: 12px 40px;
+    font-size: 18px;
+    border-radius: 10px;
 }
 .wrap_input{
+    position: relative;
     width: 60%;
     background: linear-gradient(35deg, #494949, #313131);
-    font-size: 18px;
-    padding: 12px 40px;
     border-radius: 10px;
-    color: #ececec;
+    margin: 20px 0;
+
 }
 .wrap_input  svg{
     position: absolute;

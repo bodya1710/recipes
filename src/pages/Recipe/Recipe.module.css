@@ -1,0 +1,9 @@
+.wrap_recipe {
+    display: flex;
+    column-gap: 15px;
+    padding: 15px 25px;
+}
+.wrap_recipe h2{
+    color: #2d2b2b;
+    margin-bottom: 10px;
+}

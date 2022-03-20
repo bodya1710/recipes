@@ -20,7 +20,7 @@ const Veggie = () => {
         <>
             <h2 className={css.title_slider}>Our Vegetarian Picks</h2>
             <Splide options={{
-                perPage: 5,
+                perPage: 3,
                 arrows: false,
                 pagination: false,
                 drag: 'free',
