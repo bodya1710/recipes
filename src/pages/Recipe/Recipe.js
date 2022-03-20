@@ -2,12 +2,13 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import {recipeService} from "../../service/recipe.service";
 
-import css from "./Recipe.module.css";
+import  css from"./Recipe.module.css";
+
 import {Loader} from "../../components";
 
 const Recipe = () => {
 
-    const [activeTab, setActiveTab] = useState();
+    const [activeTab, setActiveTab] = useState('instruction');
 
     const {id} = useParams();
 
@@ -35,8 +36,10 @@ const Recipe = () => {
             <div>
                 {isPostLoading && <div className={css.wrap_loader}><Loader/></div>}
             <div className={css.wrap_recipe}>
-                <div>
+                <div className={css.wrap_info_content}>
                     <h2>{recipe.title}</h2>
+                    <p className={css.diets}>Diets: {recipe.diets.map(diet => diet)}</p>
+                    <p className={css.time_recipe}>Will be ready: {recipe.readyInMinutes} min</p>
                     <img src={recipe.image} alt={recipe.title}/>
                 </div>
                 <div className={css.info}>
@@ -45,9 +48,18 @@ const Recipe = () => {
                         onClick={()=> setActiveTab('instruction')}
                     >Instruction</button>
                     <button
+                        className={activeTab === 'info' ? css.action : ''}
+                        onClick={()=> setActiveTab('info')}
+                    >Info</button>
+                    <button
                         className={activeTab === 'ingredients' ? css.action : ''}
                         onClick={()=> setActiveTab('ingredients')}
                     >Ingredients</button>
+                    <div className={css.info_container}>
+                        {activeTab === 'instruction' && <p dangerouslySetInnerHTML={{__html: recipe.instructions}}></p>}
+                        {activeTab === 'info' && <p dangerouslySetInnerHTML={{__html: recipe.summary}}></p>}
+                        {activeTab === 'ingredients' && <ul>{recipe.extendedIngredients.map(item => <li key={item.id}>{item.name} - {item.original}</li>)}</ul>}
+                    </div>
                 </div>
 
             </div>

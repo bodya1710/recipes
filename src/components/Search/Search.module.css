@@ -1,9 +1,7 @@
 form{
-
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .wrap_input input{
     border: none;
@@ -22,7 +20,7 @@ form{
     width: 60%;
     background: linear-gradient(35deg, #494949, #313131);
     border-radius: 10px;
-    margin: 20px 0;
+    margin: 15px 0;
 
 }
 .wrap_input  svg{
