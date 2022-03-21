@@ -29,7 +29,16 @@ const Recipe = () => {
         setIsPostLoading(false);
     }
 
-
+    const localFavoritesData = localStorage.getItem('popular');
+    // const checked =  check.filter(item => item.id === recipe.id)
+    function addFavorites() {
+        if (localFavoritesData){
+            const localData = JSON.parse(localFavoritesData);
+            localStorage.setItem('popular', JSON.stringify([...localData, recipe]))
+        }else {
+            localStorage.setItem('popular', JSON.stringify([recipe]))
+        }
+    }
     return (
         recipe &&
         (
@@ -55,6 +64,8 @@ const Recipe = () => {
                         className={activeTab === 'ingredients' ? css.action : ''}
                         onClick={()=> setActiveTab('ingredients')}
                     >Ingredients</button>
+                    <button onClick={()=>addFavorites()}>
+                        Add to favorites</button>
                     <div className={css.info_container}>
                         {activeTab === 'instruction' && <p dangerouslySetInnerHTML={{__html: recipe.instructions}}></p>}
                         {activeTab === 'info' && <p dangerouslySetInnerHTML={{__html: recipe.summary}}></p>}

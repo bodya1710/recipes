@@ -1,0 +1,8 @@
+.wrap_recipe_item{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
