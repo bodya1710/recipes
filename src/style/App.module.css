@@ -2,3 +2,8 @@
     padding: 0 35px;
     margin: 0 auto;
 }
+@media screen and (max-width: 768px){
+    .wrap_container{
+        padding: 0 8px;
+    }
+}

@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
+
 import {recipeService} from "../../service/recipe.service";
-
 import  css from"./Recipe.module.css";
-
 import {Loader} from "../../components";
 
 const Recipe = () => {
@@ -14,7 +13,7 @@ const Recipe = () => {
 
     const [recipe, setRecipe] = useState(null);
     const [isPostLoading, setIsPostLoading] = useState(false);
-
+    const localFavoritesData = localStorage.getItem('popular');
 
     useEffect(()=>{
         fetchRecipe();
@@ -24,13 +23,10 @@ const Recipe = () => {
         setIsPostLoading(true)
         await recipeService.getById(id).then(recipe => {
             setRecipe(recipe.data);
-            console.log(recipe.data)
         })
         setIsPostLoading(false);
     }
 
-    const localFavoritesData = localStorage.getItem('popular');
-    // const checked =  check.filter(item => item.id === recipe.id)
     function addFavorites() {
         if (localFavoritesData){
             const localData = JSON.parse(localFavoritesData);
@@ -39,6 +35,7 @@ const Recipe = () => {
             localStorage.setItem('popular', JSON.stringify([recipe]))
         }
     }
+
     return (
         recipe &&
         (
@@ -47,7 +44,7 @@ const Recipe = () => {
             <div className={css.wrap_recipe}>
                 <div className={css.wrap_info_content}>
                     <h2>{recipe.title}</h2>
-                    <p className={css.diets}>Diets: {recipe.diets.map(diet => diet)}</p>
+                    {recipe.diets.length ? <p className={css.diets}>Diets: {recipe.diets.map(diet => diet)}</p> : <p></p>}
                     <p className={css.time_recipe}>Will be ready: {recipe.readyInMinutes} min</p>
                     <img src={recipe.image} alt={recipe.title}/>
                 </div>

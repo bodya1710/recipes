@@ -30,3 +30,13 @@ form{
     transform: translate(100%, -50%);
     color: #ececec;
 }
+@media screen and (max-width: 768px){
+    .wrap_input{
+        width: 75%;
+    }
+}
+@media screen and (max-width: 480px){
+    .wrap_input{
+        width: 100%;
+    }
+}

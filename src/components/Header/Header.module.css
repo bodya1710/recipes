@@ -28,3 +28,17 @@
     align-items: center;
     justify-content: center;
 }
+@media screen and (max-width: 768px){
+    .header{
+        padding: 10px 0;
+    }
+    .favorites_container p{
+        margin: 0;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 480px){
+    .header{
+        padding: 10px 0;
+    }
+}

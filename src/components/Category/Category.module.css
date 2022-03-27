@@ -1,6 +1,8 @@
 .wrap_category{
     margin-bottom: 25px;
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
     justify-content: center;
     align-items: center;
 }
@@ -18,4 +20,15 @@
     cursor: pointer;
     color: #ececec;
     margin: 0 20px;
+}
+.wrap_category p {
+    font-size: 16px;
+}
+.wrap_category a:hover{
+    color: #2d2b2b;
+    background-color: #ececec;
+}
+.wrap_category  a[class='active']{
+    color: #2d2b2b;
+    background-color: #ececec;
 }

@@ -3,3 +3,19 @@
     color: #2d2b2b;
     margin: 30px 0 10px 0;
 }
+
+@media screen and (max-width: 1024px){
+    li{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 768px){
+     li{
+        width: 75%;
+    }
+}
+@media screen and (max-width: 480px){
+     li{
+        width: 100%;
+    }
+}
