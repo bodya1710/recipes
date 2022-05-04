@@ -1,5 +1,5 @@
-import {Pages} from "./pages";
 
+import {Pages} from "./pages";
 import css from "./style/App.module.css"
 import {Header, Search} from "./components";
 

@@ -17,7 +17,6 @@ const Header = () => {
                     <MdFavorite/>
                 </NavLink>
                 <p>My favorites</p>
-
             </div>
         </div>
     );

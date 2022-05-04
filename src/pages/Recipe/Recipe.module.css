@@ -12,6 +12,9 @@
     color: #2d2b2b;
     margin-bottom: 15px;
 }
+.wrap_info_content img{
+    max-width: 100%;
+}
 .info{
     width: 50%;
 }
@@ -41,4 +44,16 @@
 p{
     margin: 5px 0;
     font-size: 18px;
+}
+@media screen and (max-width: 1260px){
+    .wrap_recipe{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .info{
+        width: 100%;
+    }
+    .wrap_info_content{
+        width: 100%;
+    }
 }

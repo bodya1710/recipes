@@ -22,9 +22,10 @@ const Dessert = () => {
             <Splide options={{
                 perPage: 3,
                 arrows: false,
+                autoWidth: true,
                 pagination: false,
                 drag: 'free',
-                gap: '35px',
+                gap: '25px',
             }}>
                 {recipes.map(recipe =><SplideSlide key={recipe.id}><RecipeItem key={recipe.id} recipe={recipe}/></SplideSlide>)}
             </Splide>
