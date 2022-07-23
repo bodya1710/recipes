@@ -13,7 +13,7 @@ const Search = () => {
     const submitHandler = (e) => {
         e.preventDefault();
         navigate(`/searched/${input}`);
-
+        setInput('');
     }
 
     return (
@@ -21,7 +21,7 @@ const Search = () => {
             <div className={css.wrap_input}>
                 <FaSearch/>
                 <input
-                    onChange={(e)=>setInput(e.target.value)}
+                    onChange={(e) => setInput(e.target.value)}
                     type='text'
                     value={input}/>
             </div>

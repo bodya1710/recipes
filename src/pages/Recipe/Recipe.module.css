@@ -5,55 +5,73 @@
     flex: 1 1 50%;
     margin-top: 20px;
 }
-.wrap_info_content{
+
+.wrap_info_content {
     width: 50%;
 }
-.wrap_info_content h2{
+
+.wrap_info_content h2 {
     color: #2d2b2b;
     margin-bottom: 15px;
 }
-.wrap_info_content img{
+
+.wrap_info_content img {
     max-width: 100%;
 }
-.info{
+
+.info {
     width: 50%;
 }
-.info button{
-   background-color: #ffffff;
+
+.info button {
+    background-color: #ffffff;
     padding: 8px 13px;
     margin-right: 15px;
     font-size: 18px;
     border: none;
+    cursor: pointer;
 }
-.info .action{
-   background-color: #2d2b2b;
+
+.info .action {
+    background-color: #2d2b2b;
     color: #ffffff;
 
 }
-.info_container{
+
+.info_container {
     margin-top: 15px;
     padding: 10px;
 
 }
+
+.favorete:hover {
+    background-color: #2d2b2b;
+    color: #ffffff;
+}
+
 .info_container a,
-.info_container p{
+.info_container p {
     color: #2d2b2b;
     text-decoration: none;
     font-weight: 400;
 }
-p{
+
+p {
     margin: 5px 0;
     font-size: 18px;
 }
-@media screen and (max-width: 1260px){
-    .wrap_recipe{
+
+@media screen and (max-width: 1260px) {
+    .wrap_recipe {
         flex-direction: column;
         row-gap: 20px;
     }
-    .info{
+
+    .info {
         width: 100%;
     }
-    .wrap_info_content{
+
+    .wrap_info_content {
         width: 100%;
     }
 }
