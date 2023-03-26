@@ -5,7 +5,11 @@
     flex: 1 1 50%;
     margin-top: 20px;
 }
-
+.wrap_loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
 .wrap_info_content {
     width: 50%;
 }
@@ -44,7 +48,7 @@
 
 }
 
-.favorete:hover {
+button:hover {
     background-color: #2d2b2b;
     color: #ffffff;
 }
